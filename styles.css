@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: ivory;
+  margin: 0;
+  padding: 0;
+  font-family: "open sans", sans-serif;
+}
+
+.header {
+  margin-left: 40px;
+}
+
+.colors,
+.fonts,
+.text-styles {
+  width: 800px auto;
+  border: 1px solid grey;
+  margin: 40px;
+  padding: 20px 5px;
+}
+
+.colors .color,
+.fonts .fonts-list {
+  display: inline-block;
+}
+
+.colors .color #blue {
+  background-color: #2d5dcc;
+  color: azure;
+  padding: 10px 150px;
+  margin: 20px 0.5px;
+  margin-left: 10px;
+}
+
+.colors .color #pink {
+  background-color: #d957d9;
+  padding: 10px 150px;
+  margin: 20px 0.5px;
+  margin-left: 10px;
+}
+.colors .color #green {
+  background-color: #4fe0b0;
+  padding: 10px 150px;
+  margin: 20px 0.5px;
+  margin-left: 10px;
+}
+.colors .color #beige {
+  background-color: #efd9ca;
+  padding: 10px 150px;
+  margin: 20px 0.5px;
+  margin-left: 10px;
+}
+
+.fonts .fonts-list {
+  margin-right: 30px;
+  margin-left: 10px;
+}
+
+.fonts h2,
+.colors h2,
+.text-styles h2 {
+  margin-left: 10px;
+}
+
+.text-styles .text-list {
+  padding: 30px;
+  margin: 0px 30px;
+}
+
+.text-styles h2 {
+  margin-left: 10px;
+}
+
+.texts-list h1,
+.texts-list h2,
+.texts-list h4,
+.texts-list li {
+  margin-left: 10px;
+  padding: 3px;
+}
+
+.source-code {
+  font-family: "Source Code Pro", sans-serif;
+  text-decoration: underline;
+}
+
+.nunito {
+  font-family: "Nunito Sans", sans-serif;
+  text-decoration: underline;
+}
+.poppins {
+  font-family: "Poppins", sans-serif;
+  text-decoration: underline;
+}
+
+.scp {
+  font-family: "Source Code Pro", sans-serif;
+}
+
+.ns {
+  font-family: "nunito sans", sans-serif;
+}
+
+.pop {
+  font-family: "poppins", sans-serif;
+}
