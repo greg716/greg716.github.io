@@ -5,11 +5,10 @@
   padding: 0;
 }
 
-html,
 body {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
-  background-color: #332b2b;
+  background-color: rgb(15, 15, 15);
   color: #fff;
   padding-bottom: 5rem;
 }
@@ -41,12 +40,13 @@ header .container {
 }
 
 .logo {
-  width: auto;
+  /* width: auto; */
   height: 5rem;
 }
 
+/* navigation links */
 a:link {
-  background-color: black;
+  background-color: rgb(15, 15, 15);
   color: #088cf0;
   text-transform: uppercase;
   text-decoration: none;
@@ -70,25 +70,25 @@ a:active {
   color: #332b2b;
 }
 
+/* correcting a bug */
 .staff a,
 .services a,
-.price-list a {
+.price-list a,
+.location a {
   background-color: transparent;
 }
 
-/* Banner */
+/* Banner Section */
 .banner .container {
   margin-top: 5rem;
   width: 100%;
   height: 35rem;
-  background-image: url("soragrit-wongsa-aV5xrpB0bwQ-unsplash.jpg");
+  background-image: url("./assets/soragrit-wongsa-aV5xrpB0bwQ-unsplash.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 3px;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 .banner .container p {
@@ -100,17 +100,24 @@ a:active {
   text-align: center;
   text-shadow: -1px 1px black;
 }
-/* Services  */
 
-.services {
-  margin: 8rem auto;
+/* Services and staff Sections */
+
+.services,
+.staff,
+.price-list,
+.location {
+  margin: 5rem 1rem;
 }
 
-.services h2 {
+.services h2,
+.staff h2,
+.price-list h2,
+.location h2 {
   text-align: center;
   margin-bottom: 3rem;
   background-color: #bb2f1f;
-  text-shadow: -1px 1px black;
+  padding: 0.6rem;
 }
 
 .services p,
@@ -123,74 +130,57 @@ a:active {
 
 .services h3 {
   color: #bb2f1f;
-  text-transform: uppercase;
   text-shadow: none;
 }
 
-/* Staff */
-
-.staff {
-  margin: 8rem auto;
-}
-
-.staff h2 {
-  text-align: center;
-  margin-bottom: 3rem;
-  background-color: #bb2f1f;
-}
-
 section .container h4 {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 /* Prices */
 .price-list {
-  margin: 0 auto;
-}
-
-.price-list {
-  width: 100%;
+  margin-bottom: 8rem;
 }
 
 .price-list table {
   margin: 0 auto;
 }
 
-.price-list h2 {
-  background-color: #bb2f1f;
-  text-align: center;
-  margin-bottom: 3rem;
-}
 table {
   width: 80%;
-  max-width: 800px;
+  max-width: 40rem;
   border-collapse: collapse;
 }
 
 th,
 td {
-  padding: 1rem;
+  padding: 1.2rem;
+  border-bottom: 0.1rem solid #fff;
 }
 
 .column-heading {
-  text-transform: uppercase;
+  font-size: 100%;
   letter-spacing: 0.1rem;
-  font-size: 90%;
   border-bottom: 0.2rem solid #bb2f1f;
-  border-top: 0.1rem solid #fff;
+  border-top: 0.2rem solid #bb2f1f;
   text-align: center;
+  text-transform: uppercase;
 }
 
-.row-heading {
-  text-align: left;
-}
-
-.description {
-  text-align: center;
-}
-
+.row-heading,
+.description,
 .price {
-  text-align: right;
+  text-align: center;
+}
+
+/* Location */
+.location {
+  margin-bottom: 8rem;
+}
+
+#map {
+  display: flex;
+  justify-content: center;
 }
 
 /* Footer */
@@ -212,19 +202,76 @@ footer p {
   color: #332b2b;
 }
 
-/* ------------------------------------------------------- */
-/* responsive */
+/* responsiveness settings */
 @media only screen and (min-width: 320px) and (max-width: 425px) {
-  header .container {
-    height: 3rem;
-  }
+  header .container,
   .logo {
     height: 3rem;
   }
+
   a:link {
     padding: 0.4rem 0.4rem;
     font-size: 0.5rem;
     margin-right: 0.5rem;
+  }
+
+  .banner .container {
+    width: 100%;
+    height: 12rem;
+    margin-top: 2rem;
+  }
+
+  #mission {
+    font-size: 0.78rem;
+  }
+
+  .services,
+  .staff,
+  .price-list,
+  .location {
+    margin: 1rem auto;
+  }
+
+  .services h2,
+  .staff h2,
+  .price-list h2,
+  .location h2 {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0.1rem;
+  }
+
+  .services p {
+    font-size: 0.8rem;
+    line-height: 1.6;
+    padding: 0.5rem 1.5rem;
+  }
+  .column-heading,
+  .row-heading,
+  td {
+    font-size: 75%;
+  }
+
+  footer .container {
+    height: 3rem;
+  }
+
+  footer p {
+    font-size: 0.6rem;
+  }
+}
+
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+  header .container,
+  .logo {
+    height: 4rem;
+  }
+
+  a:link {
+    padding: 0.6rem 0.6rem;
+    font-size: 0.6rem;
+    margin-right: 0.9rem;
   }
 
   .banner .container {
@@ -234,112 +281,49 @@ footer p {
   }
 
   #mission {
-    font-size: 0.85rem;
-  }
-
-  .container {
-    font-size: 0.6rem;
+    font-size: 1.2rem;
   }
 
   .services,
-  .staff {
-    margin: 2rem auto;
+  .staff,
+  .price-list,
+  .location {
+    margin: 1rem auto;
   }
 
   .services h2,
   .staff h2,
-  .price-list h2 {
-    font-size: 1rem;
-    text-align: center;
-    margin-bottom: 0.5rem;
-    background-color: #bb2f1f;
-    margin-bottom: 1rem;
+  .price-list h2,
+  .location h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.7rem;
+    padding: 0rem;
   }
 
   .services p {
-    font-size: 0.8rem;
+    font-size: 1rem;
     line-height: 1.5;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 1.6rem;
   }
   .column-heading,
   .row-heading,
   td {
-    font-size: 75%;
+    font-size: 90%;
   }
+
   footer .container {
-    height: 3rem;
+    height: 4rem;
   }
 
   footer p {
     font-size: 0.8rem;
   }
 }
-
-@media only screen and (min-width: 426px) and (max-width: 768px) {
-  .banner .container {
-    width: 100%;
-    height: 25rem;
-  }
-
-  .logo {
-    height: 5rem;
-  }
-  header .container {
-    height: 5rem;
-  }
-
-  a:link {
-    padding: 0.8rem 1rem;
-    font-size: 0.7rem;
-    margin-right: 2rem;
-  }
-  #mission {
-    font-size: 1.5rem;
-  }
-
-  .container h4 {
-    font-size: 0.8rem;
-  }
-}
-@media only screen and (min-width: 769px) and (max-width: 1440px) {
-  .container h4 {
-    font-size: 1rem;
-  }
-}
-
 @media only screen and (min-width: 320px) and (max-width: 768px) {
   .services .container,
   .staff .container {
-    display: flex;
     flex-direction: column;
     align-items: center;
-  }
-
-  .services .container img,
-  .staff .container img {
-    height: 12rem;
-    width: auto;
-    margin-top: 1.25rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .services .container h4,
-  .staff .container h4 {
-    font-size: 0.8rem;
-  }
-
-  @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    .services .container img,
-    .staff .container img {
-      height: 25rem;
-      width: auto;
-      margin-top: 2.5rem;
-      margin-bottom: 1rem;
-    }
-    .services .container h4,
-    .staff .container h4 {
-      font-size: 1.4rem;
-    }
   }
 }
 
